@@ -38,7 +38,7 @@
 
       function toolbar_shortcut(e)
       {
-        if (['x', 'n', 'r', 'f', 's', 'p', 'o', '/', 'Escape'].indexOf(e.key) != -1)
+        if (['x', 'n', 'r', 'f', 's', 'p', 'o', '/', 'Escape'].indexOf(e.key) != -1 && e.ctrlKey)
         {
           if (e.key == 'x')
             rcmail.command('delete','',this,event);
@@ -233,6 +233,14 @@
       transition:all ease 0.3s;
     }
 
+    #login-form .boxcontent
+    {
+      background-color:black;
+    }
+
+    button.mainaction, input.mainaction {
+      width: 200px !important;
+    }
 
     #messagetoolbar
     {
